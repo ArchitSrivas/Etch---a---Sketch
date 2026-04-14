@@ -1,0 +1,13 @@
+.container {
+    margin: 50px auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    margin:0px;
+    background-color: aqua;
+    
+    
+}
