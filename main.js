@@ -1,7 +1,7 @@
 const container = document.querySelector("div");
 container.style.height = "850px";
 container.style.width = "850px";
-container.style.backgroundColor = "grey";
+container.style.backgroundColor = "rgb(244, 241, 228)";
 const row = document.createElement("div");
 row.classList.add("row");
 const button = document.querySelector("button");
@@ -16,11 +16,14 @@ function result(){
     box.style.height = (850 / GridSize) + "px";
     box.style.width = (850 / GridSize) + "px";
     row.appendChild(box);
+    let x = 0;
     box.addEventListener("mouseenter" ,(e) => {
         const r = (Math.random()*255);
         const g = (Math.random()*255);
         const b = (Math.random()*255);
             box.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+            let j = (x++)/10;
+            box.style.opacity = `${j}`
     })
 }
 container.appendChild(row);
